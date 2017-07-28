@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KyP-K7-rGH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="7lQ-dD-8Vy">
+            <objects>
+                <navigationController id="KyP-K7-rGH" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bnA-NH-MBL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="OVJ-i8-r9L" kind="relationship" relationship="rootViewController" id="a4j-WW-Tnz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="31g-FD-I1n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-932" y="71"/>
+        </scene>
+        <!--Delegate-->
+        <scene sceneID="az3-QZ-z43">
+            <objects>
+                <viewController id="OVJ-i8-r9L" customClass="LoginViewController" customModule="FirebaseTaco" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="wsP-QS-ydC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBackground" translatesAutoresizingMaskIntoConstraints="NO" id="ml1-Lx-jxD">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Zt-Kf-cF8">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="r9p-uq-7aD">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXj-dv-sSk">
+                                            <rect key="frame" x="149" y="20" width="76" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="8H6-U3-a0j"/>
+                                                <constraint firstAttribute="width" constant="76" id="P1Y-pA-FtH"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Hm-gg-65j" customClass="FBSDKLoginButton">
+                                            <rect key="frame" x="37.5" y="271.5" width="300" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="300" id="URN-Ht-SZe"/>
+                                                <constraint firstAttribute="height" constant="60" id="UaR-HZ-PC5"/>
+                                            </constraints>
+                                            <state key="normal" title="FB"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="OVJ-i8-r9L" id="lKd-fY-9P0"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="QXj-dv-sSk" firstAttribute="centerX" secondItem="r9p-uq-7aD" secondAttribute="centerX" id="JHL-6B-Ilx"/>
+                                        <constraint firstItem="QXj-dv-sSk" firstAttribute="top" secondItem="r9p-uq-7aD" secondAttribute="top" constant="20" id="Ua5-lp-PDw"/>
+                                        <constraint firstItem="6Hm-gg-65j" firstAttribute="centerX" secondItem="r9p-uq-7aD" secondAttribute="centerX" id="bZg-RG-905"/>
+                                        <constraint firstItem="6Hm-gg-65j" firstAttribute="centerY" secondItem="r9p-uq-7aD" secondAttribute="centerY" id="dev-Eh-ETf"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QXj-fJ-dNH" firstAttribute="bottom" secondItem="8Zt-Kf-cF8" secondAttribute="bottom" id="Fz3-GS-YFH"/>
+                            <constraint firstItem="8Zt-Kf-cF8" firstAttribute="leading" secondItem="QXj-fJ-dNH" secondAttribute="leading" id="Q6J-yC-KXv"/>
+                            <constraint firstItem="ml1-Lx-jxD" firstAttribute="top" secondItem="QXj-fJ-dNH" secondAttribute="top" id="Z2S-XM-OwZ"/>
+                            <constraint firstItem="8Zt-Kf-cF8" firstAttribute="trailing" secondItem="QXj-fJ-dNH" secondAttribute="trailing" id="d8B-9k-QS1"/>
+                            <constraint firstItem="QXj-fJ-dNH" firstAttribute="trailing" secondItem="8Zt-Kf-cF8" secondAttribute="trailing" id="hej-ws-DOs"/>
+                            <constraint firstItem="QXj-fJ-dNH" firstAttribute="bottom" secondItem="ml1-Lx-jxD" secondAttribute="bottom" id="hih-z1-ldr"/>
+                            <constraint firstItem="QXj-fJ-dNH" firstAttribute="trailing" secondItem="ml1-Lx-jxD" secondAttribute="trailing" id="oCL-R7-2gM"/>
+                            <constraint firstItem="QXj-fJ-dNH" firstAttribute="bottom" secondItem="8Zt-Kf-cF8" secondAttribute="bottom" id="pYe-qg-T1e"/>
+                            <constraint firstItem="8Zt-Kf-cF8" firstAttribute="leading" secondItem="QXj-fJ-dNH" secondAttribute="leading" id="pbe-Dx-vSD"/>
+                            <constraint firstItem="8Zt-Kf-cF8" firstAttribute="top" secondItem="QXj-fJ-dNH" secondAttribute="top" id="qlT-03-Rqp"/>
+                            <constraint firstItem="ml1-Lx-jxD" firstAttribute="leading" secondItem="QXj-fJ-dNH" secondAttribute="leading" id="uuw-Wk-7Dg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QXj-fJ-dNH"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cd4-yZ-HUn"/>
+                    <connections>
+                        <segue destination="8kC-9n-NYV" kind="showDetail" identifier="photos" action="showViewController:sender:" id="G7W-a5-CBZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o8c-lU-XDb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55.200000000000003" y="70.614692653673174"/>
+        </scene>
+        <!--PhotoStoryboard-->
+        <scene sceneID="ULi-z7-IUp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PhotoStoryboard" id="8kC-9n-NYV" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UAJ-ok-cVR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="490" y="89"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="loginBackground" width="250" height="444"/>
+    </resources>
+</document>
