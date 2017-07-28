@@ -15,6 +15,9 @@
 ##Configuración de Facebook
 La app usa Facebook para autenticar usuarios. Debes de crear una app en Facebook y actualizar el archivo *info.plist* con los datos de Facebook. Puedes ver las instrucciones en [el sitio de Facebook](https://developers.facebook.com/docs/facebook-login/ios).
 
+Estas son los valores que deben de agregar al archivo `info.plist`: 
+![Instrucciones](https://ecamacho.github.io/firebase_ios_oaxacode/images/fb_config.png)
+
 ##Configuración de Firebase
 1. Necesitas crear un Proyecto en Firebase.
 2. Configura la app iOS dentro del proyecto. Sigue [estas instrucciones](https://firebase.google.com/docs/ios/setup). Asegúrate de bajar el archivo `GoogleService-Info.plist`. El proyecto ya tiene todas las dependencias de Firebase listas, solo necesita que configures tu proyecto en Firebase y agregues ese archivo al proyecto. 
